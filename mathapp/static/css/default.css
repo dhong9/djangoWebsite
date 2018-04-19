@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(180, 230, 237); /* Background color of page: light blue */
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+video {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.page {
+    margin: 6.25%;
+}
+
+.answer {
+    color: rgb(0, 255, 0);
+}

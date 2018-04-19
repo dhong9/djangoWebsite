@@ -1,0 +1,15 @@
+{% extends 'mathapp/base.html' %}
+
+{% block content %}
+	{% load staticfiles %}
+	<h1 id="welcome">Welcome</h1>
+	<p id="par">Welcome to Builder's Sandbox! Navigate around the site by using the tabs above to acquire tools to build
+	solutions!</p>
+    <p align="center">
+        <canvas id="sandboxCanvas"></canvas>
+    </p>
+
+    <!-- JavaScript for drawing sandbox -->
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+     <script src="{% static 'javascript/sandbox.js' %}"></script>
+{% endblock %}

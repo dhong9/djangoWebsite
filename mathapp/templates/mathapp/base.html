@@ -1,0 +1,107 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <!-- Import stylesheets -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
+        <link rel="stylesheet" href="{% static 'css/default.css' %}">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Builder's Sandbox</title>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <!-- Navigation bar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <a class="navbar-brand" href="#">Menu</a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="">Home</a></li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Subjects <b class="caret"></b></a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="subjects/math" class="dropdown-toggle" data-toggle="dropdown">Math <b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu">
+                                        <li><a href="subjects/math/algebrai">Algebra I</a></li>
+                                        <li><a href="subjects/math/geometry">Geometry</a></li>
+                                        <li><a href="subjects/math/algebraii">Algebra II</a></li>
+                                        <li><a href="subjects/math/precalculus">Precalculus</a></li>
+                                        <li><a href="subjects/math/calculusi">Calculus I</a></li>
+                                        <li><a href="subjects/math/calculusii">Calculus II</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="subjects/computer_science" class="dropdown-toggle" data-toggle="dropdown">Computer Science <b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu">
+                                        <li><a href="subjects/computer_science/programming">Programming</a></li>
+                                        <li><a href="subjects/computer_science/data_structures">Data Structures</a></li>
+                                        <li><a href="subjects/computer_science/appdev">App Development</a></li>
+                                        <li><a href="subjects/computer_science/algorithms">Algorithms</a></li>
+                                        <li><a href="subjects/computer_science/languages">Languages</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apps <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="apps/tools" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu">
+                                        <li><a href="apps/tools/curve_fitting">Curve Fitting</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="apps/games" class="dropdown-toggle" data-toggle="dropdown">Games <b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu">
+                                        <li><a href="apps/games/hangman">Hangman</a></li>
+                                        <li><a href="apps/games/madlibs">Madlibs</a></li>
+                                        <li><a href="apps/games/picture_shuffle">Picture Shuffle</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="contact"><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main page content -->
+        <div class="page">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.js"
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="{% static 'javascript/navigation.js' %}"></script>
+    </body>
+</html>
