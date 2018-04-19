@@ -1,0 +1,11 @@
+{% extends 'mathapp/base.html' %}
+
+{% block content %}
+	{% load staticfiles %}
+	<h1>Computer Science</h1>
+	<div align="center">
+	    <video controls autoplay loop>
+	        <source src="{%static 'resources/videos/compSciIntro.mp4' %}" type="video/mp4"/>
+	    </video>
+	</div>
+{% endblock %}
