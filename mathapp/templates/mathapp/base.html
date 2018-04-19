@@ -40,7 +40,7 @@
 
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="subjects/math" class="dropdown-toggle" data-toggle="dropdown">Math <b class="caret"></b></a>
+                                    <a href="{% url 'math_index' %}" class="dropdown-toggle" data-toggle="dropdown">Math <b class="caret"></b></a>
 
                                     <ul class="dropdown-menu">
                                         <li><a href="subjects/math/algebrai">Algebra I</a></li>
@@ -52,7 +52,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown">Computer Science <b class="caret"></b></a>
+                                    <a href="{% url 'cs_index' %}" class="dropdown-toggle" data-toggle="dropdown">Computer Science <b class="caret"></b></a>
 
                                     <ul class="dropdown-menu">
                                         <li><a href="subjects/computer_science/programming">Programming</a></li>

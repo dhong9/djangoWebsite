@@ -1,0 +1,23 @@
+{% extends 'mathapp/base.html' %}
+
+{% block content %}
+	{% load staticfiles %}
+	<h1>Math</h1>
+    <div align="center">
+        <video controls autoplay loop>
+            <source src="{% static 'resources/videos/mathIntro.mp4' %}" type="video/mp4"/>
+        </video>
+    </div>
+    <h2>What is Math?</h2>
+    <p>The better question asked is "what is math to <em>you</em>?" What math is to each person depends on what they
+    have been exposed to.<br/>
+    <br/>
+    In elementary school, they have been exposed to adding, subtracting, multiplying, and
+    dividing numbers. So to an elementary school student, math may be the manipulation of numbers.<br/>
+    <br/>
+    In middle school, people have been exposed to working with variables. So to a middle school student, math may be the
+    manipulation of numbers and variables.<br/>
+    <br/>
+    As people get exposed to more math, their view of math broadens. On the top, under the Subjects tabs, you will find a list of topics that
+    this site currently offers. The goal of this site is to broaden your understanding of math. So please enjoy! </p>
+{% endblock %}
