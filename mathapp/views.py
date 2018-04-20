@@ -8,3 +8,9 @@ def computer_science(request):
 
 def math(request):
 	return render(request, 'mathapp/subjects/math/math_index.html', {});
+
+def games(request):
+	return render(request, 'mathapp/apps/games/games_index.html', {});
+
+def tools(request):
+	return render(request, 'mathapp/apps/tools/tools_index.html', {});

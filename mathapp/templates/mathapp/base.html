@@ -68,14 +68,14 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apps <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="apps/tools" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+                                    <a href="{% url 'tools_index' %}" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
 
                                     <ul class="dropdown-menu">
                                         <li><a href="apps/tools/curve_fitting">Curve Fitting</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="apps/games" class="dropdown-toggle" data-toggle="dropdown">Games <b class="caret"></b></a>
+                                    <a href="{% url 'games_index' %}" class="dropdown-toggle" data-toggle="dropdown">Games <b class="caret"></b></a>
 
                                     <ul class="dropdown-menu">
                                         <li><a href="apps/games/hangman">Hangman</a></li>

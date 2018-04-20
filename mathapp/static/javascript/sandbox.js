@@ -3,11 +3,8 @@ var sketchProc = function(processingInstance) {
         var degrees = 0, angle = degrees % (2 * PI);
 
         var setup = function() {
-            if (screen.width < screen.height) {
-                size(screen.width / 2, screen.width / 2, P3D);
-            } else {
-                size(screen.height / 2, screen.height / 2, P3D);
-            }
+            var middle = screen.width < screen.height ? screen.width / 2 : screen.height / 2;
+            size(middle, middle, P3D);
             frameRate(60);
             noStroke();
         }
