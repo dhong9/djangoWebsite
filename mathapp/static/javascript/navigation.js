@@ -8,8 +8,9 @@ $(document).ready(function () {
         if (!$parent.parent().hasClass('nav')) {
             if ($parent.closest('.nav').hasClass('navbar-right'))
                 $el.next().css({"top": $el[0].offsetTop, "right": $parent.outerWidth() - 4});
-            else
+            } else {
                 $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
+            }
         }
 
         $('.nav li.open').not($(this).parents("li")).removeClass("open");
