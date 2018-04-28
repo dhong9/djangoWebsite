@@ -1,11 +1,13 @@
 {% extends 'mathapp/base.html' %}
 
 {% block content %}
+	{% load staticfiles %}
 	<h1>Algebra I</h1>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
 	<script src="{% static 'javascript/map/Node.js' %}"></script>
 	<script src="{% static 'javascript/map/Arrow.js' %}"></script>
+	<script src="{% static 'javascript/subjects/math/algebrai/main.js' %}"></script>
 
 	<canvas></canvas>
 {% endblock %}
