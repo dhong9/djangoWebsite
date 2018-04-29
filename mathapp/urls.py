@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^subjects/math/calculusii/calculusii_index.html', views.calculusii, name='calculusii_index'),
     url(r'^subjects/math/geometry/geometry_index.html', views.geometry, name='geometry_index'),
     url(r'^subjects/math/algebrai/precalculus_index.html', views.precalculus, name='precalculus_index'),
+	url(r'^subjects/math/algebrai/numbers/numbers_index.html', views.numbers, name='numbers_index'),
 ]

@@ -32,3 +32,6 @@ def geometry(request):
 
 def precalculus(request):
 	return render(request, 'mathapp/subjects/math/precalculus/precalculus_index.html', {})
+
+def numbers(request):
+	return render(request, 'mathapp/subjects/math/algebrai/numbers/numbers_index.html', {})

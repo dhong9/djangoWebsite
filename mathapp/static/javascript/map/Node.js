@@ -20,9 +20,9 @@ class Node {
         return sq(this.x - mouseX) + sq(this.y - mouseY) <= sq(this.radius / 2);
     }
 
-    clicked() {
+    clickedOnto() {
         if (this.isMouseInside()) {
-            window.open(this.link);
+            window.open("127.0.0.1:8000");
         }
     }
 

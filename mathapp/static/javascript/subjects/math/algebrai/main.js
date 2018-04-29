@@ -6,7 +6,7 @@ var arrows;
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	
-	numbers = new Node(width / 8, height / 2, "Numbers", "numbers");
+	numbers = new Node(width / 8, height / 2, "Numbers", "numbers_index");
     variables = new Node(5 * width / 16, height / 2, "Variables", "variables");
     expressions = new Node(width / 2, height / 2, "Expressions", "expressions");
     functions = new Node(11 * width / 16, height / 2, "Functions", "functions");
@@ -36,5 +36,12 @@ function draw() {
 }
 
 function mouseClicked() {
-	nodes.forEach(i => i.clicked());
+	nodes.forEach(i => {
+		if (i.isMouseInside()) {
+			let request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+			request.open("GET", "http://127.0.0.1:8000", false);
+			request.send();
+			window.open(request.status === 404 ? "http://dhong9.pythonanywhere.com" : "http://127.0.0.1:8000");
+		}
+	});
 }
