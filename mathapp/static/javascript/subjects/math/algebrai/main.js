@@ -41,8 +41,7 @@ function mouseClicked() {
 		if (i.isMouseInside()) {
 			let request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 			request.open("GET", `http://127.0.0.1:8000/${i.link}`, false);
-			request.send();
-			window.open(request.status === 404 ? `http://dhong9.pythonanywhere.com/${i.link}` : `http://127.0.0.1:8000/${i.link}`);
+			window.open(request.status === 200 ? `http://dhong9.pythonanywhere.com/${i.link}` : `http://127.0.0.1:8000/${i.link}`);
 		}
 	});
 }
