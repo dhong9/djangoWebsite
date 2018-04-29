@@ -6,8 +6,7 @@ var arrows;
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	
-	var baseString = "subjects/math/algebrai/";
-	numbers = new Node(width / 8, height / 2, "Numbers",  `${baseString }numbers/numbers_index.html`);
+	numbers = new Node(width / 8, height / 2, "Numbers",  "numbers/numbers_index.html");
     variables = new Node(5 * width / 16, height / 2, "Variables", "variables");
     expressions = new Node(width / 2, height / 2, "Expressions", "expressions");
     functions = new Node(11 * width / 16, height / 2, "Functions", "functions");
@@ -37,11 +36,5 @@ function draw() {
 }
 
 function mouseClicked() {
-	nodes.forEach(i => {
-		if (i.isMouseInside()) {
-			let request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-			request.open("GET", `http://127.0.0.1:8000/${i.link}`, false);
-			window.open(request.status === 200 ? `http://127.0.0.1:8000/${i.link}` : `http://dhong9.pythonanywhere.com/${i.link}`);
-		}
-	});
+	nodes.forEach(i => { if (i.isMouseInside()) window.open(i.link);});
 }

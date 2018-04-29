@@ -1,5 +1,17 @@
 {% extends 'mathapp/base.html' %}
 
 {% block content %}
-
+	{% load staticfiles %}
+	<h1>Numbers</h1>
+    <h2>Overview</h2>
+    <p>Numbers are the fundamental building blocks for solving problems. Use the resources on this page to learn about numbers!</p>
+    <p align="center">
+        <canvas id="mycanvas"></canvas>
+    </p>
+    <p>You can read more about variables by clicking <a href="{% static 'resources/handouts/numbers.pd' %}f">here</a>. You can also explore the concept
+    of variables by clicking <a href="../../../../subjects/math/algebrai/numbers/number_darts">here</a>.</p>
+	
+	<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+	<script src="{% static 'javascript/subjects/math/algebrai/main.js' %}"></script>
+    <script src="{% static 'javascript/subjects/math/algebrai/numbers/rotatingBlocks.js' %}"></script>
 {% endblock %}
