@@ -1,3 +1,4 @@
+{% load socialaccount %}
 {% load staticfiles %}
 <html>
     <head>
@@ -94,11 +95,12 @@
         <!-- Main page content -->
         <div class="page">
 			{% if user.is_authenticated %}
-			<p>Hi {{ user.username }}
-			<p><a href="{% url 'logout' %}">Log out</a></p>
+			<p>Welcome {{ user.username }} !!!</p>
+			<p><a href="{% url 'account_logout' %}">Log out</a>
 			{% else %}
-			<p><a href="{% url 'signup' %}">Sign Up</a></p>
-			<p><a href="{% url 'login' %}">Log In </a></p>
+			<p><a href="{% url 'account_signup' %}">Sign Up</a></p>
+			<p><a href="{% url 'account_login' %}">Log In </a></p>
+			<p><a href="{% provider_login_url 'google' %}">Log In with Gmail</a></p>
 			{% endif %}
             {% block content %}
             {% endblock %}
