@@ -88,6 +88,10 @@
                         </li>
                         <li id="contact"><a href="contact">Contact</a></li>
                     </ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="{% url 'account_signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li><a href="{% url 'account_login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				    </ul>
                 </div>
             </div>
         </div>
@@ -98,8 +102,6 @@
 			<p>Welcome {{ user.username }} !!!</p>
 			<p><a href="{% url 'account_logout' %}">Log out</a>
 			{% else %}
-			<p><a href="{% url 'account_signup' %}">Sign Up</a></p>
-			<p><a href="{% url 'account_login' %}">Log In </a></p>
 			<p><a href="{% provider_login_url 'google' %}">Log In with Gmail</a></p>
 			{% endif %}
             {% block content %}
